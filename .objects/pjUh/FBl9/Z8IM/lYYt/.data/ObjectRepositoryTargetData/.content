@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SHcWtzyTCUaLeT6oo9XamQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.screener.in/" CVScreenId="ed32c52c-b8c0-410a-bcff-42077e3f727b" CvTextArea="573, 441, 297, 33" CvTextArgument="Search for a company" CvType="Text" DesignTimeRectangle="495, 414, 927, 84" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='search' tag='INPUT' class='u-full-width' placeholder='Search for a company' aaname='' /&gt;" Guid="530cd640-bd9f-4cee-aaa0-983bb12acd8b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Stock Screener and fundamental analysis tool for Indian stocks - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="52dc3df57c32c87d27d1cba19e3bf86c.png" xmlns="">0p381ej8fR06lLkPTtDYobg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

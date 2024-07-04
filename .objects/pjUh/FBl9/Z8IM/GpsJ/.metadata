@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Click 'I'",
+  "Type": "Element",
+  "Id": "GpsJs_ctukG76AJadkYncQ",
+  "Reference": "fgtHfxW8lkiM3tCPE66oJQ/GpsJs_ctukG76AJadkYncQ",
+  "ParentRef": "fgtHfxW8lkiM3tCPE66oJQ/Z8IMZ9TbikGR8pNMCAIPmg",
+  "Created": "2024-07-04T16:45:17.290258Z",
+  "Updated": "2024-07-04T16:45:17.290258Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

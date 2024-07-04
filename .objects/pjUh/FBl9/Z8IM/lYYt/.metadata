@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Click 'INPUT'",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "lYYtw8e_lEeS6wLutBOURA",
+  "Reference": "fgtHfxW8lkiM3tCPE66oJQ/lYYtw8e_lEeS6wLutBOURA",
+  "ParentRef": "fgtHfxW8lkiM3tCPE66oJQ/Z8IMZ9TbikGR8pNMCAIPmg",
+  "Created": "2024-07-04T16:55:16.9597064Z",
+  "Updated": "2024-07-04T16:55:16.9597064Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
