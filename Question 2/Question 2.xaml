@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question_2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="688,2152" sap2010:WorkflowViewState.IdRef="Question_2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question_2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="678,1731.3333333333333" sap2010:WorkflowViewState.IdRef="Question_2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -97,7 +97,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="• From the attached excel file [Assignment_Dataset.xlsx], fetch only the records whose Age is more than 40 and less than 50. Write it in a new excel file [1] using Workbook activities. &#xA;• From the newly created excel file [1], Display the Last Name of the 4th data row in message box using excel activities &#xA;• In the newly created excel file [1], Replace\Write the First Name of the 3rd data row with your name using workbook activities. &#xA;" DisplayName="Question_2" sap:VirtualizedContainerService.HintSize="698,2087.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="• From the attached excel file [Assignment_Dataset.xlsx], fetch only the records whose Age is more than 40 and less than 50. Write it in a new excel file [1] using Workbook activities. &#xA;• From the newly created excel file [1], Display the Last Name of the 4th data row in message box using excel activities &#xA;• In the newly created excel file [1], Replace\Write the First Name of the 3rd data row with your name using workbook activities. &#xA;" DisplayName="Question_2" sap:VirtualizedContainerService.HintSize="688,1666.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_AssignementDetails" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Age" />
@@ -108,8 +108,15 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="636,175.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process started&quot;]" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_AssignementDetails]" DisplayName="Read Range Workbook : To get the datatable to filter age" sap:VirtualizedContainerService.HintSize="636,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Test Data" WorkbookPath="Data\Input\Assignment_DataSet.xlsx">
+    <ui:LogMessage DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="626,57.333333333333336" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process started&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_AssignementDetails]" DisplayName="Read Range Workbook : To get the datatable to filter age" sap:VirtualizedContainerService.HintSize="626,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Test Data" WorkbookPath="Data\Input\Assignment_DataSet.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -117,7 +124,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <ui:FilterDataTable DataTable="[dt_AssignementDetails]" DisplayName="Filter Data Table : Filter age" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="636,194.66666666666666" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_Age]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="filtering the data table if age is greater than 40 and lesser than 50" DataTable="[dt_AssignementDetails]" DisplayName="Filter Data Table : Filter age" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="626,102.66666666666667" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_Age]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="GT">
@@ -145,38 +152,39 @@
       </ui:FilterDataTable.SelectColumns>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_Age]" DisplayName="Write Range Workbook :Filtered age" sap:VirtualizedContainerService.HintSize="636,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Age" WorkbookPath="Data\Output\Question 2.xlsx">
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_Age]" DisplayName="Write Range Workbook :Filtered age" sap:VirtualizedContainerService.HintSize="626,57.333333333333336" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Age" WorkbookPath="Data\Output\Question 2.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:WriteRange>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope : To use excel" sap:VirtualizedContainerService.HintSize="636,1087.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope : To use excel" sap:VirtualizedContainerService.HintSize="626,962" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do : to perfrom 2 and 3 activity" sap:VirtualizedContainerService.HintSize="602,968" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do : to perfrom 2 and 3 activity" sap:VirtualizedContainerService.HintSize="592,842.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File : using the modified excel file" sap:VirtualizedContainerService.HintSize="540,880" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Data\Output\Question 2.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File : using the modified excel file" sap:VirtualizedContainerService.HintSize="530,754.6666666666666" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Data\Output\Question 2.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do : Performing operations" sap:VirtualizedContainerService.HintSize="506,583.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Do : Performing operations" sap:VirtualizedContainerService.HintSize="496,451.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="LastName" />
                     </Sequence.Variables>
@@ -185,13 +193,33 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Age&quot;).Cell(&quot;C5&quot;)]" DisplayName="Read Cell Value : To get the last name" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="444,193.33333333333334" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
+                    <ueab:ReadCellValueX sap2010:Annotation.AnnotationText="retrieving the last name of the 4th field" Cell="[Excel.Sheet(&quot;Age&quot;).Cell(&quot;C5&quot;)]" DisplayName="Read Cell Value : To get the last name" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
                       <ueab:ReadCellValueX.SaveTo>
                         <OutArgument x:TypeArguments="x:String">[LastName]</OutArgument>
                       </ueab:ReadCellValueX.SaveTo>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </ueab:ReadCellValueX>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : display last name" sap:VirtualizedContainerService.HintSize="444,118" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;The lastname of the person who is in the 4th row &quot;+LastName.toString]" />
-                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Age&quot;).Cell(&quot;B4&quot;)]" DisplayName="Write Cell : replacing the 3rd cell with name" sap:VirtualizedContainerService.HintSize="444,184" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;Shireen&quot;]" />
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : display last name" sap:VirtualizedContainerService.HintSize="434,57.333333333333336" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;The lastname of the person who is in the 4th row &quot;+LastName.toString]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:MessageBox>
+                    <ueab:WriteCellX sap2010:Annotation.AnnotationText="replacing the 3rd cell with name" Cell="[Excel.Sheet(&quot;Age&quot;).Cell(&quot;B4&quot;)]" DisplayName="Write Cell : replacing the 3rd cell with name" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;Shireen&quot;]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:WriteCellX>
                   </Sequence>
                 </ActivityAction>
               </ueab:ExcelApplicationCard.Body>
@@ -200,6 +228,6 @@
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
     </ueab:ExcelProcessScopeX>
-    <ui:LogMessage DisplayName="Log Message : Process Completed" sap:VirtualizedContainerService.HintSize="636,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process Completed&quot;]" />
+    <ui:LogMessage DisplayName="Log Message : Process Completed" sap:VirtualizedContainerService.HintSize="626,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process Completed&quot;]" />
   </Sequence>
 </Activity>

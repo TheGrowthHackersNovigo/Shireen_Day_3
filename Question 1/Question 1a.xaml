@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question_1" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="913,993" sap2010:WorkflowViewState.IdRef="Question_1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question_1" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="587.3333333333334,748" sap2010:WorkflowViewState.IdRef="Question_1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -97,7 +97,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="• Print name of all employees – First Name &amp; Last Name whose EmpID lies between 1200 and 1300" DisplayName="Question_1" sap:VirtualizedContainerService.HintSize="416,928" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="• Print name of all employees – First Name &amp; Last Name whose EmpID lies between 1200 and 1300" DisplayName="Question_1" sap:VirtualizedContainerService.HintSize="416,683.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Personal" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_FilteredEmpId" />
@@ -109,9 +109,25 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process started&quot;]" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_Personal]" DisplayName="Read Range Workbook :Personal" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Personal" WorkbookPath="Data\Input\Emp_Data_Set.xlsx" />
-    <ui:FilterDataTable DataTable="[dt_Personal]" DisplayName="Filter Data Table : whose employee id is between 1200 ans 1300" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_FilteredEmpId]" SelectColumnsMode="Keep">
+    <ui:LogMessage sap2010:Annotation.AnnotationText=" Process Started" DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="354,207.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process started&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Reap input from excel sheet -Personal" DataTable="[dt_Personal]" DisplayName="Read Range Workbook :Personal" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Personal" WorkbookPath="Data\Input\Emp_Data_Set.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadRange>
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Whose employee id is between 1200 and 1300" DataTable="[dt_Personal]" DisplayName="Filter Data Table : whose employee id is between 1200 ans 1300" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_FilteredEmpId]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="GT">
@@ -138,8 +154,31 @@
           <InArgument x:TypeArguments="x:String">["Lname"]</InArgument>
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_FilteredEmpId]" DisplayName="Write Range Workbook : Employees whose range matches" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Personal" WorkbookPath="Data\Output\Question1.xlsx" />
-    <ui:LogMessage DisplayName="Log Message : Process Completed" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process Completed&quot;]" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Writing back to the output file " DataTable="[dt_FilteredEmpId]" DisplayName="Write Range Workbook : Employees whose range matches" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Personal" WorkbookPath="Data\Output\Question1.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WriteRange>
+    <ui:LogMessage sap2010:Annotation.AnnotationText=" Process Completed" DisplayName="Log Message : Process Completed" sap:VirtualizedContainerService.HintSize="354,78.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process Completed&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
   </Sequence>
 </Activity>

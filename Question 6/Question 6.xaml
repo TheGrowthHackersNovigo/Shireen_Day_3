@@ -120,7 +120,7 @@
       <AssemblyReference>UiPath.GSuite</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Screener:&#xA;• Go to URL: https://www.screener.in/&#xA;• For the company ids provided in the attached Excel generate an output file with the following fields. &#xA;                   Company Name, High, Low, Face Value&#xA;• Save the output in an excel file&#xA;" DisplayName="Question_6" sap:VirtualizedContainerService.HintSize="608.6666666666666,3368.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Screener:&#xA;• Go to URL: https://www.screener.in/&#xA;• For the company ids provided in the attached Excel generate an output file with the following fields. &#xA;                   Company Name, High, Low, Face Value&#xA;• Save the output in an excel file&#xA;" DisplayName="Question_6" sap:VirtualizedContainerService.HintSize="608.6666666666666,2524.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_CompanyCode" />
       <Variable x:TypeArguments="x:Int32" Name="index">
@@ -139,7 +139,14 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="546.6666666666666,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process started&quot;]" />
+    <ui:LogMessage DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="546.6666666666666,57.333333333333336" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process started&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
     <ui:ReadRange AddHeaders="True" DataTable="[dt_CompanyCode]" DisplayName="Read Range Workbook : Initial data" sap:VirtualizedContainerService.HintSize="546.6666666666666,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Screener" WorkbookPath="Data\Input\Input_Screener.xlsx">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
@@ -147,55 +154,55 @@
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Company Name" DataTable="[dt_CompanyCode]" DisplayName="Add Data Column : Company name" sap:VirtualizedContainerService.HintSize="546.6666666666666,223.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4">
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Company Name" DataTable="[dt_CompanyCode]" DisplayName="Add Data Column : Company name" sap:VirtualizedContainerService.HintSize="546.6666666666666,57.333333333333336" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:AddDataColumn>
-    <ui:WriteRange AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook : Company name" sap:VirtualizedContainerService.HintSize="546.6666666666666,148" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Screener" StartingCell="B1" WorkbookPath="Data\Output\CompanyDetails.xlsx">
+    <ui:WriteRange AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook : Company name" sap:VirtualizedContainerService.HintSize="546.6666666666666,57.333333333333336" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Screener" StartingCell="B1" WorkbookPath="Data\Output\CompanyDetails.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:WriteRange>
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="High/Low" DataTable="[dt_CompanyCode]" DisplayName="Add Data Column : High/Low" sap:VirtualizedContainerService.HintSize="546.6666666666666,223.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5">
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="High/Low" DataTable="[dt_CompanyCode]" DisplayName="Add Data Column : High/Low" sap:VirtualizedContainerService.HintSize="546.6666666666666,57.333333333333336" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:AddDataColumn>
-    <ui:WriteRange AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook :High/Low" sap:VirtualizedContainerService.HintSize="546.6666666666666,148" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="Screener" StartingCell="C1" WorkbookPath="Data\Output\CompanyDetails.xlsx">
+    <ui:WriteRange AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook :High/Low" sap:VirtualizedContainerService.HintSize="546.6666666666666,57.333333333333336" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="Screener" StartingCell="C1" WorkbookPath="Data\Output\CompanyDetails.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:WriteRange>
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Face Value" DataTable="[dt_CompanyCode]" DisplayName="Add Data Column : Face Value" sap:VirtualizedContainerService.HintSize="546.6666666666666,223.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_6">
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Face Value" DataTable="[dt_CompanyCode]" DisplayName="Add Data Column : Face Value" sap:VirtualizedContainerService.HintSize="546.6666666666666,57.333333333333336" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:AddDataColumn>
-    <ui:WriteRange AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook :Face Value" sap:VirtualizedContainerService.HintSize="546.6666666666666,148" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Screener" StartingCell="D1" WorkbookPath="Data\Output\CompanyDetails.xlsx">
+    <ui:WriteRange AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook :Face Value" sap:VirtualizedContainerService.HintSize="546.6666666666666,57.333333333333336" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Screener" StartingCell="D1" WorkbookPath="Data\Output\CompanyDetails.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:WriteRange>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Stock Screener and fundamental analysis tool for Indian stocks - Screener" sap:VirtualizedContainerService.HintSize="546.6666666666666,1590.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="f59d63e7-4f90-47ba-9d55-292f40335571" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Open the screener website and take the company code from the excel and paste it and extracting the required details and store it back" AttachMode="ByInstance" DisplayName="Use Browser Edge: Stock Screener and fundamental analysis tool for Indian stocks - Screener" sap:VirtualizedContainerService.HintSize="546.6666666666666,1636" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="f59d63e7-4f90-47ba-9d55-292f40335571" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -314,6 +321,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>

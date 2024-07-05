@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question_1c" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="887,1205" sap2010:WorkflowViewState.IdRef="Question_1c_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question_1c" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="587.3333333333334,1216" sap2010:WorkflowViewState.IdRef="Question_1c_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -85,7 +85,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="• Generate report (Excel File) of all employees (First Name &amp; Last Name) who have 4-wheeler Pass. Refer VehiclePass Sheet." DisplayName="Question_1c" sap:VirtualizedContainerService.HintSize="416,1140" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="• Generate report (Excel File) of all employees (First Name &amp; Last Name) who have 4-wheeler Pass. Refer VehiclePass Sheet." DisplayName="Question_1c" sap:VirtualizedContainerService.HintSize="416,1151.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Personal" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_VehiclePass" />
@@ -98,10 +98,32 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process started&quot;]" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_Personal]" DisplayName="Read Range Workbook : for personal" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Personal" WorkbookPath="Data\Input\Emp_Data_Set.xlsx" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_VehiclePass]" DisplayName="Read Range Workbook : for vehicle pass" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="VehiclePass" WorkbookPath="Data\Input\Emp_Data_Set.xlsx" />
-    <ui:JoinDataTables DataTable1="[dt_Personal]" DataTable2="[dt_VehiclePass]" DisplayName="Join Data Tables : joining personal and vehiclepass" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Inner" OutputDataTable="[dt_Output]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Process Started" DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process started&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Read input excel sheet - personal" DataTable="[dt_Personal]" DisplayName="Read Range Workbook : for personal" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Personal" WorkbookPath="Data\Input\Emp_Data_Set.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadRange>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Read input excel sheet - vehicle pass" DataTable="[dt_VehiclePass]" DisplayName="Read Range Workbook : for vehicle pass" sap:VirtualizedContainerService.HintSize="354,150.66666666666666" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="VehiclePass" WorkbookPath="Data\Input\Emp_Data_Set.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadRange>
+    <ui:JoinDataTables sap2010:Annotation.AnnotationText=" joining personal and vehiclepass" DataTable1="[dt_Personal]" DataTable2="[dt_VehiclePass]" DisplayName="Join Data Tables : joining personal and vehiclepass" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Inner" OutputDataTable="[dt_Output]">
       <ui:JoinDataTables.Arguments>
         <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
           <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
@@ -114,8 +136,15 @@
           </ui:JoinOperationArgument>
         </scg:List>
       </ui:JoinDataTables.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:JoinDataTables>
-    <ui:FilterDataTable DataTable="[dt_Output]" DisplayName="Filter Data Table : if type of pass&gt;4" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_UpdatedDataTable]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter if type of pass&gt;4" DataTable="[dt_Output]" DisplayName="Filter Data Table : if type of pass&gt;4" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,226.66666666666666" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_UpdatedDataTable]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -136,8 +165,27 @@
           <InArgument x:TypeArguments="x:String">["Type of Pass"]</InArgument>
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[dt_UpdatedDataTable]" DisplayName="Write Range Workbook : updated employee names" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Vehicle Pass" WorkbookPath="Data\Output\Question1.xlsx" />
-    <ui:LogMessage DisplayName="Log Message : Process Completed" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process Completed&quot;]" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" sap2010:Annotation.AnnotationText="updated employee names" DataTable="[dt_UpdatedDataTable]" DisplayName="Write Range Workbook : updated employee names" sap:VirtualizedContainerService.HintSize="354,178.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Vehicle Pass" WorkbookPath="Data\Output\Question1.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WriteRange>
+    <ui:LogMessage sap2010:Annotation.AnnotationText=" Process Completed" DisplayName="Log Message : Process Completed" sap:VirtualizedContainerService.HintSize="354,198" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process Completed&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
   </Sequence>
 </Activity>
