@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Click 'NSE INFY'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "LjfW1zIsEE6oyUQ62YUZ-A",
+  "Reference": "fgtHfxW8lkiM3tCPE66oJQ/LjfW1zIsEE6oyUQ62YUZ-A",
+  "ParentRef": "fgtHfxW8lkiM3tCPE66oJQ/GV2iva1JbUGR92bVOhXx9Q",
+  "Created": "2024-07-05T17:07:37.7558123Z",
+  "Updated": "2024-07-05T17:07:37.7558123Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

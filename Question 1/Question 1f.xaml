@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question_1f" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="887,1625" sap2010:WorkflowViewState.IdRef="Question_1f_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question_1f" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="587.3333333333334,1642.6666666666667" sap2010:WorkflowViewState.IdRef="Question_1f_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -85,7 +85,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="• Generate report (Excel File) of all employees (First Name &amp; Last Name) who took leave in July but not in June (Refer Sheet Leave_Jun21 &amp; Leave_July21)" DisplayName="Question_1f" sap:VirtualizedContainerService.HintSize="416,1560" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="• Generate report (Excel File) of all employees (First Name &amp; Last Name) who took leave in July but not in June (Refer Sheet Leave_Jun21 &amp; Leave_July21)" DisplayName="Question_1f" sap:VirtualizedContainerService.HintSize="416,1578" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_June" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_July" />
@@ -101,7 +101,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process started&quot;]" />
+    <ui:LogMessage DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process started&quot;]" />
     <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_June]" DisplayName="Read Range Workbook : for jun" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Leave_Jun21" WorkbookPath="Data\Input\Emp_Data_Set.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -138,7 +138,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:JoinDataTables>
-    <ui:FilterDataTable DataTable="[dt_Output]" DisplayName="Filter Data Table:which are empty" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="354,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_UpdatedOutput]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dt_Output]" DisplayName="Filter Data Table:which are empty" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="354,196" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_UpdatedOutput]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="NOTEMPTY">
@@ -168,7 +168,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <ui:JoinDataTables DataTable1="[dt_UpdatedOutput]" DataTable2="[dt_Personal]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="JoinDataTables_2" JoinType="Inner" OutputDataTable="[dt_UpdatedWithName]">
+    <ui:JoinDataTables DataTable1="[dt_UpdatedOutput]" DataTable2="[dt_Personal]" DisplayName="Join Data Tables : with personal" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="JoinDataTables_2" JoinType="Inner" OutputDataTable="[dt_UpdatedWithName]">
       <ui:JoinDataTables.Arguments>
         <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
           <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
@@ -188,7 +188,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:JoinDataTables>
-    <ui:FilterDataTable DataTable="[dt_UpdatedWithName]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dt_Final]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable DataTable="[dt_UpdatedWithName]" DisplayName="Filter Data Table : emp id, fname and lname" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,196" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dt_Final]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
@@ -216,6 +216,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:WriteRange>
-    <ui:LogMessage DisplayName="Log Message : Process Completed" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process Completed&quot;]" />
+    <ui:LogMessage DisplayName="Log Message : Process Completed" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process Completed&quot;]" />
   </Sequence>
 </Activity>

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question6_Excel" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1062,4366" sap2010:WorkflowViewState.IdRef="Question6_Excel_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question6_Excel" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1062,4370.666666666667" sap2010:WorkflowViewState.IdRef="Question6_Excel_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -111,7 +111,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Screener:&#xA;• Go to URL: https://www.screener.in/&#xA;• For the company ids provided in the attached Excel generate an output file with the following fields. &#xA;                   Company Name, High, Low, Face Value&#xA;• Save the output in an excel file&#xA;" DisplayName="Question6_Excel" sap:VirtualizedContainerService.HintSize="1072,4301" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Screener:&#xA;• Go to URL: https://www.screener.in/&#xA;• For the company ids provided in the attached Excel generate an output file with the following fields. &#xA;                   Company Name, High, Low, Face Value&#xA;• Save the output in an excel file&#xA;" DisplayName="Question6_Excel" sap:VirtualizedContainerService.HintSize="1072,4346" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -119,26 +119,26 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="1010,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process started&quot;]" />
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1010,3774" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+    <ui:LogMessage DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="1010,175.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process started&quot;]" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope : to read the excel file and perform operations" sap:VirtualizedContainerService.HintSize="1010,3759.3333333333335" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="976,3655" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="976,3672" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="914,3567" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Data\Input\Input_Screener.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File :to read the input" sap:VirtualizedContainerService.HintSize="914,3584" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Data\Input\Input_Screener.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="880,3235" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do : operations" sap:VirtualizedContainerService.HintSize="880,3287.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="dt_InputScreener" />
                     </Sequence.Variables>
@@ -147,28 +147,27 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="818,201" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(&quot;Screener&quot;)]" SaveTo="[dt_InputScreener]" />
-                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Stock Screener and fundamental analysis tool for Indian stocks - Screener" sap:VirtualizedContainerService.HintSize="818,2946" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f59d63e7-4f90-47ba-9d55-292f40335571" Version="V2">
+                    <ueab:ReadRangeX DisplayName="Read Range : input" sap:VirtualizedContainerService.HintSize="818,203.33333333333334" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(&quot;Screener&quot;)]" SaveTo="[dt_InputScreener]" />
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Stock Screener and fundamental analysis tool for Indian stocks - Screener" sap:VirtualizedContainerService.HintSize="818,2996" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f59d63e7-4f90-47ba-9d55-292f40335571" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="784,2706" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="784,2754.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_InputScreener]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="722,2616" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_InputScreener]" DisplayName="For Each Row in Data Table : company code" sap:VirtualizedContainerService.HintSize="722,2664" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                               <ui:ForEachRow.Body>
                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,2427" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                  <Sequence DisplayName="Body : for each company code do the below" sap:VirtualizedContainerService.HintSize="688,2472" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                     <Sequence.Variables>
-                                      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                                       <Variable x:TypeArguments="x:String" Name="CompanyName" />
                                       <Variable x:TypeArguments="x:String" Name="Low" />
                                       <Variable x:TypeArguments="x:String" Name="High" />
@@ -180,7 +179,7 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="8" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="626,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" Text="[CurrentRow(&quot;CompanyCode&quot;).ToString + &quot;[k(Enter)]&quot;]" Version="V3">
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="8" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="626,252" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" Text="[CurrentRow(&quot;CompanyCode&quot;).ToString + &quot;[k(Enter)]&quot;]" Version="V3">
                                       <uix:NTypeInto.Target>
                                         <uix:TargetAnchorable BrowserURL="https://www.screener.in/explore/" CVScreenId="c868b5f1-de7d-4c5a-a031-399214645944" CvTextArea="986, 141, 157, 17" CvTextArgument="Search for a company" CvType="Text" DesignTimeRectangle="940, 132, 250, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentid='desktop-search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='desktop-search' tag='INPUT' type='search' class='u-full-width' placeholder='Search for a company' aaname='' /&gt;" Guid="3c855d30-ad54-49e6-b065-a28e1a6b0963" ImageBase64="" InformativeScreenshot="a9db23e0c4516734db3eadb377da410b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Explore stock screens - Screener' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
                                       </uix:NTypeInto.Target>
@@ -191,7 +190,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uix:NTypeInto>
-                                    <uix:NGetText DisplayName="Get Text 'Home Screens'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" TextString="[CompanyName]" Version="V3">
+                                    <uix:NGetText DisplayName="Get Text 'Home Screens'" sap:VirtualizedContainerService.HintSize="626,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" TextString="[CompanyName]" Version="V3">
                                       <uix:NGetText.Target>
                                         <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="1c140b1b-49d5-407c-bf84-caf3eb660922" CvTextArea="114, 266, 199, 42" CvType="AnyWordGroup" DesignTimeRectangle="113, 260, 200, 49" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='top' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='top' tag='H1' type='' class='margin-0 show-from-tablet-landscape' /&gt;" Guid="de23706a-ff75-4193-bbdd-546e0be6b957" InformativeScreenshot="9125ab61d66536e4a8fc5993017ae445.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                           <uix:TargetAnchorable.Anchors>
@@ -208,7 +207,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uix:NGetText>
-                                    <uix:NGetText DisplayName="Get Text 'High / Low'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" TextString="[High]" Version="V3">
+                                    <uix:NGetText DisplayName="Get Text 'High '" sap:VirtualizedContainerService.HintSize="626,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" TextString="[High]" Version="V3">
                                       <uix:NGetText.Target>
                                         <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="bdfd1cca-f562-46fb-bdaa-3b82ed4fcd45" CvTextArea="880, 398, 39, 16" CvType="AnyWordGroup" DesignTimeRectangle="881, 396, 38, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='1,733' class='number' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='number' parentid='top-ratios' tag='SPAN' type='' /&gt;" Guid="b20afd71-2bae-4fc8-86e7-2717b2b01e6a" InformativeScreenshot="7f8b3f353bfb278524643409c5017683.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                           <uix:TargetAnchorable.Anchors>
@@ -219,7 +218,7 @@
                                         </uix:TargetAnchorable>
                                       </uix:NGetText.Target>
                                     </uix:NGetText>
-                                    <uix:NGetText DisplayName="Get Text '1,305'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" TextString="[Low]" Version="V3">
+                                    <uix:NGetText DisplayName="Get Text 'Low'" sap:VirtualizedContainerService.HintSize="626,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" TextString="[Low]" Version="V3">
                                       <uix:NGetText.Target>
                                         <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="bdfd1cca-f562-46fb-bdaa-3b82ed4fcd45" CvTextArea="931, 398, 39, 16" CvType="AnyWordGroup" DesignTimeRectangle="932, 396, 39, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='1,305' class='number' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='number' parentid='top-ratios' tag='SPAN' type='' /&gt;" Guid="9adc91c8-96a1-46c4-af22-7dd69eed27c1" InformativeScreenshot="8c8e5ff8239b6461623ee4aae297a1ba.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                           <uix:TargetAnchorable.Anchors>
@@ -230,7 +229,7 @@
                                         </uix:TargetAnchorable>
                                       </uix:NGetText.Target>
                                     </uix:NGetText>
-                                    <uix:NGetText DisplayName="Get Text 'Face Value'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" TextString="[FaceValue]" Version="V3">
+                                    <uix:NGetText DisplayName="Get Text 'Face Value'" sap:VirtualizedContainerService.HintSize="626,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" TextString="[FaceValue]" Version="V3">
                                       <uix:NGetText.Target>
                                         <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="28e2f08e-7a7c-4e69-93bc-4c4d2c0d713c" CvTextArea="925, 492, 46, 15" CvType="AnyWordGroup" DesignTimeRectangle="927, 489, 44, 23" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;span' idx='18' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='nowrap value' parentid='top-ratios' tag='SPAN' /&gt;" Guid="72819fe3-e3a0-4012-8b46-9942831bf301" InformativeScreenshot="381f1765cbf2c11bd3ca57c28968d0eb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                           <uix:TargetAnchorable.Anchors>
@@ -247,34 +246,34 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uix:NGetText>
-                                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="626,1333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+                                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope : to write" sap:VirtualizedContainerService.HintSize="626,1369.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
                                       <ueab:ExcelProcessScopeX.Body>
                                         <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                                           </ActivityAction.Argument>
-                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1223" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1259.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,1135" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Data\Output\Question 6_Excel.xlsx">
+                                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File : writing the data back to the excel" sap:VirtualizedContainerService.HintSize="530,1171.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" UseTemplate="True" WorkbookPath="Data\Output\Question 6_Excel.xlsx">
                                               <ueab:ExcelApplicationCard.Body>
                                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Output" />
                                                   </ActivityAction.Argument>
-                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,843" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                                  <Sequence DisplayName="Do :write" sap:VirtualizedContainerService.HintSize="496,852" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Output.Sheet(&quot;Sheet1&quot;).Cell(&quot;A1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[CompanyName]" />
-                                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Output.Sheet(&quot;Sheet1&quot;).Cell(&quot;B1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[High]" />
-                                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Output.Sheet(&quot;Sheet1&quot;).Cell(&quot;C1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[Low]" />
-                                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Output.Sheet(&quot;Sheet1&quot;).Cell(&quot;D1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,182" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[FaceValue]" />
+                                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Output.Sheet(&quot;Sheet1&quot;).Cell(&quot;A1&quot;)]" DisplayName="Write Cell : Company name" sap:VirtualizedContainerService.HintSize="434,193.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[CompanyName]" />
+                                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Output.Sheet(&quot;Sheet1&quot;).Cell(&quot;B1&quot;)]" DisplayName="Write Cell : High" sap:VirtualizedContainerService.HintSize="434,193.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[High]" />
+                                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Output.Sheet(&quot;Sheet1&quot;).Cell(&quot;C1&quot;)]" DisplayName="Write Cell :Low" sap:VirtualizedContainerService.HintSize="434,193.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[Low]" />
+                                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Output.Sheet(&quot;Sheet1&quot;).Cell(&quot;D1&quot;)]" DisplayName="Write Cell: Face Value" sap:VirtualizedContainerService.HintSize="434,184" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[FaceValue]" />
                                                   </Sequence>
                                                 </ActivityAction>
                                               </ueab:ExcelApplicationCard.Body>
@@ -314,6 +313,6 @@
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
     </ueab:ExcelProcessScopeX>
-    <ui:LogMessage DisplayName="Log Message : Process Completed" sap:VirtualizedContainerService.HintSize="1010,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process Completed&quot;]" />
+    <ui:LogMessage DisplayName="Log Message : Process Completed" sap:VirtualizedContainerService.HintSize="1010,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process Completed&quot;]" />
   </Sequence>
 </Activity>

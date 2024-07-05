@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="6umRyoeY8Ee4ecI-MFo1CQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="3fc8380b-d37f-4d08-8e7b-9fd86889ee02" CvTextArea="474, 543, 81, 15" CvTextArgument="NSE: INFY" CvType="Text" DesignTimeRectangle="476, 541, 79, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='             NSE:             INFY           ' parentid='top' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='             NSE:             INFY           ' parentid='top' tag='SPAN' type='' class='ink-700 upper' check:innerText='NSE: INFY' /&gt;" Guid="ba8a7317-0ba1-4638-a789-53567a769942" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="450, 543, 22, 16" FullSelectorArgument="&lt;webctrl class='icon-link-ext' idx='2' parentid='top' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl class='icon-link-ext' type='' parentid='top' tag='I' aaname='' /&gt;" Guid="51892a3d-c136-4bf0-93b0-90a2fc81575d" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="f9b2a351a830f93ce1376b88ac565bbb.png" xmlns="">0Vec1Jsfd6U2Mb805pC-zEA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

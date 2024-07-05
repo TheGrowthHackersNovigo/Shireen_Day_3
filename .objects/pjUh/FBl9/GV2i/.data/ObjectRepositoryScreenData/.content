@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="A-ISvbwyJEGdswCvPXHj0g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAABUQAAAVEBKaLAYAAAAkxJREFUWEftl89OE1EYxa/zr9NWE0hcQP8gOpQFUlDGoqkNFt1oVWpdgCjBhSwsDQ0QI9EYEhBiQsvCt/EVfAFfp54zTpsuPkPIzOzmJr/M7Xwn3zl3cpPeq14090IH4wrQwbXq5+SDR/v28tKu/ZhwXmmnXNY8jdQgKBgaDVY66Y2DP6M9ieJre8kLITUIAgZXb4Lc8if7i2ROpp+Y76kRmwTBD2ABp7Jtn0jm5GbZ3KFGbBKEoQCFh037VDInk2WzTY3YJAiRB/ANLiL8AH5j7m5uMBpIsEZNAoQegI3TI+PqRu0oVX96mGwMw3esUQNsEF4ADK6eq8ssbtpbe79HehKsQZMFDBF6AH5ip9iwDiRzwho0U+AqiCRAYbZufZXMCWte08sGwKDBRUQTAONSOzuKAOnkqJpYOU80X54n28PUf6ZatyqJaWqAt7OjCJBxqvra1q90T6LcSuxDM9jZUQRw8ve0lmRO3E3rGJrBzo4iQCHnam3JnCxsWKe+MA4QB4gDxAHiAJEFcDJz2rZkTu6sWSe+kE2nbj///4mINWr62vsf7CPJnORd8yM0DsD1SKnaWFE7HJvTzkAHdPkcn9d+6Lp64wv5bziJ62Qj7xrfcwvGWfau0SWc8x1rnkap1EBbMo4nFlEvGV3Q4Tw7b3xDvQbo7d1SZ8AzQLO34J3/XAVVkAE8D1wHJfAKrAPqCOd8xxo1PMhIWvakB73oSe9/12jANFwpP3cf/qY5V08dT0VszOM3P3VfxznfsUZN/wQladmTXvBU+l9+x+Q1s05rCQAAAABJRU5ErkJggg==" Selector="&lt;html app='chrome.exe' title='Core Watchlist feed - Screener' /&gt;" Title="Core Watchlist feed - Screener" Url="https://www.screener.in/">
+      <imageRef attrName="InformativeScreenshot" originalValue="a2a5ec9620da2b34c9565dfc98829f85.jpg" xmlns="">0ZxnCDmVcbk-H8gWgxCRljw</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>
