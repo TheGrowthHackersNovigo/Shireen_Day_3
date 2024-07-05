@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question_6" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="883.3333333333334,2671.3333333333335" sap2010:WorkflowViewState.IdRef="Question_6_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question_6" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="883.3333333333333,3544.6666666666665" sap2010:WorkflowViewState.IdRef="Question_6_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -120,7 +120,7 @@
       <AssemblyReference>UiPath.GSuite</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Screener:&#xA;• Go to URL: https://www.screener.in/&#xA;• For the company ids provided in the attached Excel generate an output file with the following fields. &#xA;                   Company Name, High, Low, Face Value&#xA;• Save the output in an excel file&#xA;" DisplayName="Question_6" sap:VirtualizedContainerService.HintSize="608,2606.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Screener:&#xA;• Go to URL: https://www.screener.in/&#xA;• For the company ids provided in the attached Excel generate an output file with the following fields. &#xA;                   Company Name, High, Low, Face Value&#xA;• Save the output in an excel file&#xA;" DisplayName="Question_6" sap:VirtualizedContainerService.HintSize="608,3480" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_CompanyCode" />
     </Sequence.Variables>
@@ -130,9 +130,16 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_CompanyCode]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="546,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Screener" WorkbookPath="Data\Input\Input_Screener.xlsx" />
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Company Name" DataTable="[dt_CompanyCode]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="546,223.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4" />
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="High/Low" DataTable="[dt_CompanyCode]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="546,223.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5">
+    <ui:ReadRange AddHeaders="True" DataTable="[dt_CompanyCode]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="546,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Screener" WorkbookPath="Data\Input\Input_Screener.xlsx">
+      <ui:ReadRange.Range>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:ReadRange.Range>
+    </ui:ReadRange>
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Company Name" DataTable="[dt_CompanyCode]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="546,221.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4" />
+    <ui:WriteRange AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="546,148" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Screener" StartingCell="B1" WorkbookPath="Data\Output\CompanyDetails.xlsx" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="High/Low" DataTable="[dt_CompanyCode]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="546,221.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -140,35 +147,39 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:AddDataColumn>
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Face Value" DataTable="[dt_CompanyCode]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="546,223.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_6" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Core Watchlist feed - Screener" sap:VirtualizedContainerService.HintSize="546,1616.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="99d04c01-daae-43a9-9e6f-1c974eade1c0" Version="V2">
+    <ui:WriteRange AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="546,148" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="Screener" StartingCell="C1" WorkbookPath="Data\Output\CompanyDetails.xlsx" />
+    <ui:WriteRange AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="546,148" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="Screener" StartingCell="D1" WorkbookPath="Data\Output\CompanyDetails.xlsx" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Face Value" DataTable="[dt_CompanyCode]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="546,221.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_6" />
+    <ui:WriteRange AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="546,148" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Screener" StartingCell="D1" WorkbookPath="Data\Output\CompanyDetails.xlsx" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Core Watchlist feed - Screener" sap:VirtualizedContainerService.HintSize="546,1908" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="99d04c01-daae-43a9-9e6f-1c974eade1c0" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1374.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1666.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_CompanyCode]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="450,1284" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_CompanyCode]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="450,1576" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,1093.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,1384" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+                      <Variable x:TypeArguments="x:String" Name="CompanyName" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Feed Screens'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="99d04c01-daae-43a9-9e6f-1c974eade1c0" Text="[CurrentRow(&quot;CompanyCode&quot;).ToString + &quot;[k(Enter)]&quot;]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="0.2" DisplayName="Type Into 'Feed Screens'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,289.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="99d04c01-daae-43a9-9e6f-1c974eade1c0" Text="[CurrentRow(&quot;CompanyCode&quot;).ToString + &quot;[k(Enter)]&quot;]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.screener.in/" DesignTimeRectangle="1115, 204, 375, 51" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentid='desktop-search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='desktop-search' tag='INPUT' type='search' class='u-full-width' placeholder='Search for a company' aaname='' /&gt;" Guid="3b416f11-0e89-4972-b73e-f9207217bea8" InformativeScreenshot="a583695546148b3f3e69348a6afcfc50.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Core Watchlist feed - Screener' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -189,7 +200,7 @@
                         </uix:VerifyExecutionTypeIntoOptions>
                       </uix:NTypeInto.VerifyOptions>
                     </uix:NTypeInto>
-                    <uix:NGetText DisplayName="Get Text 'Feed Screens'" sap:VirtualizedContainerService.HintSize="354,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="99d04c01-daae-43a9-9e6f-1c974eade1c0" TextString="[CurrentRow(&quot;Company Name&quot;)]" Version="V3">
+                    <uix:NGetText DisplayName="Get Text 'Feed Screens'" sap:VirtualizedContainerService.HintSize="354,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="99d04c01-daae-43a9-9e6f-1c974eade1c0" TextString="[CurrentRow(&quot;Company Name&quot;)]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" DesignTimeRectangle="119, 584, 301, 74" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='top' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='top' tag='H1' type='' class='margin-0 show-from-tablet-landscape' /&gt;" Guid="18c26ac7-446b-429c-be03-94a0c22ebe86" InformativeScreenshot="52aeadc57da26c86e94fe48df6cf191f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -200,7 +211,7 @@
                         </uix:TargetAnchorable>
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <uix:NGetText DisplayName="Get Text 'High / Low'" sap:VirtualizedContainerService.HintSize="354,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="99d04c01-daae-43a9-9e6f-1c974eade1c0" TextString="[CurrentRow(&quot;High/Low&quot;)]" Version="V3">
+                    <uix:NGetText DisplayName="Get Text 'High / Low'" sap:VirtualizedContainerService.HintSize="354,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="99d04c01-daae-43a9-9e6f-1c974eade1c0" TextString="[CurrentRow(&quot;High/Low&quot;)]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" DesignTimeRectangle="1036, 786, 152, 35" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl aaname='₹  / ' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='₹  / ' parentid='top-ratios' tag='SPAN' type='' class='nowrap value' /&gt;" Guid="619ad476-4170-461c-b4d4-dccda7ddcfea" InformativeScreenshot="d34027c95d976db1fc94972c23418521.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -211,7 +222,7 @@
                         </uix:TargetAnchorable>
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <uix:NGetText DisplayName="Get Text '₹ 5.00'" sap:VirtualizedContainerService.HintSize="354,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="99d04c01-daae-43a9-9e6f-1c974eade1c0" TextString="[CurrentRow(&quot;Face Value&quot;)]" Version="V3">
+                    <uix:NGetText DisplayName="Get Text '₹ 5.00'" sap:VirtualizedContainerService.HintSize="354,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="99d04c01-daae-43a9-9e6f-1c974eade1c0" TextString="[CurrentRow(&quot;Face Value&quot;)]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" DesignTimeRectangle="1122, 928, 66, 35" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;span' idx='18' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='nowrap value' parentid='top-ratios' tag='SPAN' /&gt;" Guid="2bc748a4-dc52-4a37-b6cc-625385d0ce32" InformativeScreenshot="6a4a948b4301aa7ace9290947a492673.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -222,7 +233,9 @@
                         </uix:TargetAnchorable>
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,138.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Screener" WorkbookPath="Data\Output\CompanyDetails.xlsx" />
+                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Screener" WorkbookPath="Data\Output\CompanyDetails.xlsx" />
+                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Screener" WorkbookPath="Data\Output\CompanyDetails.xlsx" />
+                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[dt_CompanyCode]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,138.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Screener" WorkbookPath="Data\Output\CompanyDetails.xlsx" />
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>
