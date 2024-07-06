@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question5" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="694,3288.0000000000005" sap2010:WorkflowViewState.IdRef="Question5_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question5" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="694,3248" sap2010:WorkflowViewState.IdRef="Question5_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -105,7 +105,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Question6" sap:VirtualizedContainerService.HintSize="704,3223.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Screener:&#xA;• Go to URL: https://www.screener.in/&#xA;• For the company ids provided in the attached Excel generate an output file with the following fields. &#xA;                   Company Name, High, Low, Face Value&#xA;• Save the output in an excel file&#xA;" DisplayName="Question6" sap:VirtualizedContainerService.HintSize="704,3585.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Output" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_CompanyCode" />
@@ -118,11 +118,21 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[dt_Output]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="642,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;High&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Low&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Face_x0020_Value&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_CompanyCode]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="642,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Screener" WorkbookPath="Data\Input\Input_Screener.xlsx" />
-    <Assign sap:VirtualizedContainerService.HintSize="642,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage sap2010:Annotation.AnnotationText=" Process Started" DisplayName="Log Message : Process Started" sap:VirtualizedContainerService.HintSize="642,206" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Process started&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:BuildDataTable DataTable="[dt_Output]" DisplayName="Build Data Table : to add the column names" sap:VirtualizedContainerService.HintSize="642,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;High&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Face_x0020_Value&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_CompanyCode]" DisplayName="Read Range Workbook : input screener" sap:VirtualizedContainerService.HintSize="642,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Screener" WorkbookPath="Data\Input\Input_Screener.xlsx" />
+    <Assign DisplayName="Assign :NseCheck" sap:VirtualizedContainerService.HintSize="642,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[NseCheck]</OutArgument>
       </Assign.To>
@@ -130,7 +140,7 @@
         <InArgument x:TypeArguments="x:String">JustToCheck</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Stock Screener and fundamental analysis" sap:VirtualizedContainerService.HintSize="642,2806.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f59d63e7-4f90-47ba-9d55-292f40335571" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Stock Screener and fundamental analysis" sap:VirtualizedContainerService.HintSize="642,2776" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f59d63e7-4f90-47ba-9d55-292f40335571" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -142,7 +152,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_CompanyCode]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="546,2434.6666666666665" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_CompanyCode]" DisplayName="For Each Row in Data Table : company code" sap:VirtualizedContainerService.HintSize="546,2434.6666666666665" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
@@ -155,11 +165,11 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="8" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,252" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" Text="[CurrentRow(&quot;CompanyCode&quot;).ToString + &quot;[k(Enter)][k(Enter)]&quot;]" Timeout="5" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="8" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,252" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" Text="[CurrentRow(&quot;CompanyCode&quot;).ToString + &quot;[k(Enter)]&quot;]" Timeout="5" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.screener.in/" CVScreenId="30d2b242-db79-4bfb-b6fc-331c12792855" CvTextArea="1185, 296, 234, 25" CvTextArgument="Search for a company" CvType="Text" DesignTimeRectangle="1115, 282, 375, 51" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentid='desktop-search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='desktop-search' tag='INPUT' type='search' class='u-full-width' placeholder='Search for a company' aaname='' /&gt;" Guid="b3fa0400-a131-41d5-93db-79cc016edeb8" InformativeScreenshot="b22b02ebb5a67fffc41f2832e631e093.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Core Watchlist feed - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target CVScreenId="30d2b242-db79-4bfb-b6fc-331c12792855" CvTextArea="81, 288, 249, 39" CvTextArgument="screenenl" CvType="Text" DesignTimeRectangle="83, 282, 248, 47" ElementType="Icon" FullSelectorArgument="&lt;webctrl tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='logo' aaname='Screener Logo' /&gt;" Guid="aa53d9ee-2ab2-42c4-b419-0536e0bb9e00" SearchSteps="Selector, CV" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
@@ -176,7 +186,7 @@
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="eefb9822-5be2-47ff-ad39-5eb28d5e75b5" CvTextArea="647, 521, 48, 19" CvType="AnyWordGroup" DesignTimeRectangle="645, 520, 49, 19" DesignTimeScaleFactor="1.5" ElementType="Text" Guid="e813c233-ee1c-4760-a6ec-a553a1f1b285" InformativeScreenshot="5b286a86e9828a895768291d92bdb5a0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target CVScreenId="eefb9822-5be2-47ff-ad39-5eb28d5e75b5" CvTextArea="593, 521, 49, 19" CvTextArgument="NSE:" CvType="Text" DesignTimeRectangle="594, 520, 48, 19" ElementType="Text" Guid="8433b4d6-695d-49a6-a2f4-2b80f638db6a" SearchSteps="CV" TargetType="ComputerVisionBased" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
@@ -208,7 +218,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Nse]" />
+                    <ui:LogMessage DisplayName="Log Message : displaying Nse" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Nse]" />
                     <If Condition="[NseCheck=CurrentRow(&quot;CompanyCode&quot;).ToString]" sap:VirtualizedContainerService.HintSize="450,1476.6666666666667" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
                         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,1210.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -227,7 +237,7 @@
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="9661ec72-12da-454a-a92b-22195e7eb09e" CvTextArea="129, 488, 201, 42" CvType="AnyWordGroup" DesignTimeRectangle="130, 481, 200, 49" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='top' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='top' tag='H1' type='' class='margin-0 show-from-tablet-landscape' /&gt;" Guid="854647c9-6622-43b5-aca6-a259759eab9f" InformativeScreenshot="c002dd33ab42be9afa499a0d1af97a63.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                     <uix:Target CVScreenId="9661ec72-12da-454a-a92b-22195e7eb09e" CvElementArea="592, 288, 21, 21" CvTextArea="104, 282, 484, 27" CvTextArgument="screenenl FEED SCREENS TOOLS" CvType="ArrowButton" DesignTimeRectangle="106, 270, 508, 50" FullSelectorArgument="&lt;webctrl class='flex' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='flex' tag='DIV' type='' aaname='                    ' check:innerText='FEED&amp;#xD;&amp;#xA;SCREENS&amp;#xD;&amp;#xA;TOOLS' /&gt;" Guid="0352b26f-04ed-4e61-8640-210cd5f06942" SearchSteps="Selector, CV" />
                                   </scg:List>
                                 </uix:TargetAnchorable.Anchors>
@@ -244,18 +254,18 @@
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="9661ec72-12da-454a-a92b-22195e7eb09e" CvTextArea="1112, 618, 40, 18" CvType="AnyWordGroup" DesignTimeRectangle="1114, 617, 37, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='1,733' class='number' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='number' parentid='top-ratios' tag='SPAN' type='' /&gt;" Guid="ce40d8da-2cd8-4c23-978a-4d276987d674" ImageBase64="" InformativeScreenshot="0753de946c6f3c3cecf40d2b86cc3fea.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                     <uix:Target CVScreenId="9661ec72-12da-454a-a92b-22195e7eb09e" CvTextArea="888, 618, 315, 18" CvTextArgument="High / Low A 1,733 1,305" CvType="Text" DesignTimeRectangle="878, 603, 337, 47" ElementType="ListItem" FullSelectorArgument="&lt;webctrl idx='3' parentid='top-ratios' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='top-ratios' tag='LI' class='flex flex-space-between' aaname='              ' check:innerText='High / Low&amp;#xD;&amp;#xA;₹ 1,733 / 1,305' /&gt;" Guid="11a69ee5-ad45-46e0-bf58-524b414117aa" SearchSteps="FuzzySelector, CV" />
                                   </scg:List>
                                 </uix:TargetAnchorable.Anchors>
                               </uix:TargetAnchorable>
                             </uix:NGetText.Target>
                           </uix:NGetText>
-                          <uix:NGetText DisplayName="Get Text '1,305'" sap:VirtualizedContainerService.HintSize="354,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" TextString="[Low]" Version="V3">
+                          <uix:NGetText DisplayName="Get Text 'Low'" sap:VirtualizedContainerService.HintSize="354,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="f59d63e7-4f90-47ba-9d55-292f40335571" TextString="[Low]" Version="V3">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="9661ec72-12da-454a-a92b-22195e7eb09e" CvTextArea="1164, 618, 39, 16" CvType="AnyWordGroup" DesignTimeRectangle="1165, 617, 38, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='1,305' class='number' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='number' parentid='top-ratios' tag='SPAN' type='' /&gt;" Guid="f178684c-ab70-46f0-88c0-ea85a38e412e" ImageBase64="" InformativeScreenshot="e2a57e90750fc55f57882a1431dd292c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                     <uix:Target CVScreenId="9661ec72-12da-454a-a92b-22195e7eb09e" CvTextArea="888, 618, 76, 18" CvTextArgument="High / Low" CvType="Text" DesignTimeRectangle="890, 615, 74, 23" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='          High / Low        ' class='name' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='          High / Low        ' class='name' parentid='top-ratios' tag='SPAN' type='' check:innerText='High / Low' /&gt;" Guid="539f005d-12dc-4cd5-a9d9-03db3c44788f" SearchSteps="FuzzySelector, CV" />
                                   </scg:List>
                                 </uix:TargetAnchorable.Anchors>
@@ -266,7 +276,7 @@
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://www.screener.in/company/INFY/consolidated/" CVScreenId="9661ec72-12da-454a-a92b-22195e7eb09e" CvTextArea="1169, 714, 34, 15" CvType="AnyWordGroup" DesignTimeRectangle="1172, 712, 31, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='5.00' class='number' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='number' parentid='top-ratios' tag='SPAN' type='' /&gt;" Guid="b8ed757d-df9a-4fe8-8b87-26836641fe8f" ImageBase64="" InformativeScreenshot="374a2145cd1bdf897ce0633b7fa93743.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                     <uix:Target CVScreenId="9661ec72-12da-454a-a92b-22195e7eb09e" CvTextArea="888, 714, 78, 15" CvTextArgument="Face Value" CvType="Text" DesignTimeRectangle="890, 710, 76, 23" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='          Face Value        ' class='name' parentid='top-ratios' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='          Face Value        ' class='name' parentid='top-ratios' tag='SPAN' type='' check:innerText='Face Value' /&gt;" Guid="56e18727-9c8e-4980-9778-2080e7340d67" SearchSteps="FuzzySelector, CV" />
                                   </scg:List>
                                 </uix:TargetAnchorable.Anchors>
@@ -279,8 +289,8 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NGetText>
-                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CompanyName.ToString,High.ToString,Low.ToString,FaceValue.ToString}]" DataTable="[dt_Output]" DisplayName="Add Data Row : all calculated sum" sap:VirtualizedContainerService.HintSize="354,221.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-                          <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_Output]" DisplayName="Write Range Workbook : sum" sap:VirtualizedContainerService.HintSize="354,138.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Screener2" WorkbookPath="Data\Output\Question6.xlsx" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CompanyName.ToString,High.ToString,Low.ToString,FaceValue.ToString}]" DataTable="[dt_Output]" DisplayName="Add Data Row : all data which is extracted" sap:VirtualizedContainerService.HintSize="354,221.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                          <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_Output]" DisplayName="Write Range Workbook : storing back the results into excel" sap:VirtualizedContainerService.HintSize="354,138.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Screener2" WorkbookPath="Data\Output\Question6.xlsx" />
                         </Sequence>
                       </If.Then>
                       <If.Else>
@@ -316,5 +326,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
+    <ui:LogMessage sap2010:Annotation.AnnotationText=" Process Completed" DisplayName="Log Message : Process Completed" sap:VirtualizedContainerService.HintSize="642,78.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Process Completed&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
   </Sequence>
 </Activity>
